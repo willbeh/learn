@@ -60,15 +60,6 @@ Designed for experienced developers wanting to master modern JavaScript features
 - A JavaScript runtime environment (Node.js) or web browser with developer tools
 - A code editor (VS Code, Sublime Text, or similar)
 
-### How to Use These Challenges
-
-1. **Choose Your Level** - Start with beginner if you're new to JavaScript, or jump to your appropriate skill level
-2. **Read the Challenge** - Each file contains detailed instructions and learning objectives
-3. **Complete the TODOs** - Look for `// TODO:` comments that guide you through the implementation
-4. **Test Your Code** - Run your solutions and verify they produce the expected output
-5. **Check Solutions** - Compare your implementation with the provided solutions in `/solutions/`
-6. **Experiment** - Try the bonus challenges and create your own variations
-
 ### Running the Challenges
 
 #### In Node.js:
