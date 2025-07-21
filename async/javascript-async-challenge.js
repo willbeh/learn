@@ -87,6 +87,11 @@ console.log("\n=== CHALLENGE 2: MULTIPLE ASYNC OPERATIONS ===\n");
 // TASK 2.1: Sequential operations
 /**
  * Create a function that performs operations one after another
+ * 
+ * INSTRUCTIONS:
+ * 1. Complete the skeleton code below by filling in the missing parts
+ * 2. Use await to call each function one after another (sequential)
+ * 3. Make sure to return the correct data structure
  */
 
 async function fetchUserDataSequential(userId) {
@@ -106,33 +111,31 @@ async function fetchUserDataSequential(userId) {
     return [`Friend1 of User${id}`, `Friend2 of User${id}`];
   }
 
-  // TODO:
-  // 1. Get the current time using Date.now()
-  // 2. Fetch profile, posts, and friends ONE BY ONE using await
-  // 3. Calculate total time taken
-  // 4. Return an object with all data and timing info
+  // TODO: Complete this skeleton
+  console.time('⏱️  Sequential operations');
+  const startTime = Date.now();
 
-  // SKELETON:
-  // const startTime = Date.now();
-  // 
-  // const profile = await fetchProfile(userId);
-  // const posts = await fetchPosts(userId);
-  // const friends = await fetchFriends(userId);
-  // 
-  // const totalTime = Date.now() - startTime;
-  // 
-  // return {
-  //     profile,
-  //     posts,
-  //     friends,
-  //     totalTime,
-  //     method: 'sequential'
-  // };
+  // TODO: Call fetchProfile, fetchPosts, and fetchFriends one by one using await
+  // const profile = await ...
+  // const posts = await ...
+  // const friends = await ...
+
+  const totalTime = Date.now() - startTime;
+  console.timeEnd('⏱️  Sequential operations');
+
+  return {
+    // TODO: Fill in the return object with profile, posts, friends, totalTime, and method: 'sequential'
+  };
 }
 
 // TASK 2.2: Parallel operations with Promise.all
 /**
  * Create a function that performs the same operations in parallel
+ * 
+ * INSTRUCTIONS:
+ * 1. Complete the skeleton code below using Promise.all
+ * 2. Start all operations at the same time (parallel)
+ * 3. Use destructuring to get the results from Promise.all
  */
 
 async function fetchUserDataParallel(userId) {
@@ -152,31 +155,21 @@ async function fetchUserDataParallel(userId) {
     return [`Friend1 of User${id}`, `Friend2 of User${id}`];
   }
 
-  // TODO:
-  // 1. Get the current time
-  // 2. Start all three operations at the same time using Promise.all
-  // 3. Wait for all to complete with await
-  // 4. Calculate total time taken
-  // 5. Return the same structure as sequential version
+  // TODO: Complete this skeleton
+  console.time('⚡ Parallel operations');
+  const startTime = Date.now();
 
-  // SKELETON:
-  // const startTime = Date.now();
-  // 
+  // TODO: Use Promise.all with destructuring to get all results at once
   // const [profile, posts, friends] = await Promise.all([
-  //     fetchProfile(userId),
-  //     fetchPosts(userId),
-  //     fetchFriends(userId)
+  //   // TODO: Add the three function calls here
   // ]);
-  // 
-  // const totalTime = Date.now() - startTime;
-  // 
-  // return {
-  //     profile,
-  //     posts,
-  //     friends,
-  //     totalTime,
-  //     method: 'parallel'
-  // };
+
+  const totalTime = Date.now() - startTime;
+  console.timeEnd('⚡ Parallel operations');
+
+  return {
+    // TODO: Fill in the return object with profile, posts, friends, totalTime, and method: 'parallel'
+  };
 }
 
 
