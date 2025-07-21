@@ -172,11 +172,85 @@ async function fetchUserDataParallel(userId) {
   };
 }
 
+// =============================================================================
+// CHALLENGE 3: ASYNC GENERATORS
+// =============================================================================
 
+/**
+ * CHALLENGE 3: Basic Async Generators
+ * 
+ * GOAL: Learn to create and use async generators
+ * 
+ * WHAT YOU'LL LEARN:
+ * - Creating async generator functions with async function*
+ * - Using yield in async context
+ * - Consuming async generators with for-await-of
+ */
 
+console.log("\n=== CHALLENGE 3: ASYNC GENERATORS ===\n");
 
+// TASK 3.1: Create a simple async generator
+/**
+ * Create an async generator that yields numbers with delays
+ * 
+ * INSTRUCTIONS:
+ * 1. Complete the async generator function below
+ * 2. Use yield to produce values one at a time
+ * 3. Add delays between each yield using await delay()
+ */
 
+async function* numberStream(count, delayMs = 500) {
+  // TODO: Complete this async generator
+  // HINT: Use a for loop to generate numbers from 1 to count
+  // HINT: Use yield to return each number
+  // HINT: Add await delay(delayMs) between yields
 
+  // SKELETON:
+  // for (let i = 1; i <= count; i++) {
+  //   await delay(delayMs);
+  //   console.log(`📡 Streaming number: ${i}`);
+  //   yield i;
+  // }
+}
+
+// TASK 3.2: Create a function that consumes the async generator
+/**
+ * Create a function that processes data from the number stream
+ * 
+ * INSTRUCTIONS:
+ * 1. Use for-await-of loop to iterate over the generator
+ * 2. Process each yielded value
+ * 3. Collect and return summary information
+ */
+
+async function processNumberStream(count, delayMs) {
+  // TODO: Complete this function
+  // HINT: Use for-await-of to iterate over numberStream(count, delayMs)
+  // HINT: Collect all numbers in an array
+  // HINT: Calculate sum and average
+
+  console.time('⏱️  Processing number stream');
+
+  // SKELETON:
+  // const numbers = [];
+  // 
+  // for await (const number of numberStream(count, delayMs)) {
+  //   numbers.push(number);
+  //   console.log(`✅ Received: ${number}`);
+  // }
+  // 
+  // const sum = numbers.reduce((acc, num) => acc + num, 0);
+  // const average = sum / numbers.length;
+
+  console.timeEnd('⏱️  Processing number stream');
+
+  // return {
+  //   numbers,
+  //   count: numbers.length,
+  //   sum,
+  //   average: Math.round(average * 100) / 100
+  // };
+}
 
 // =============================================================================
 // TESTING YOUR SOLUTIONS
@@ -223,10 +297,21 @@ async function testChallenges() {
     // console.log(`Parallel took: ${parallelResult.totalTime}ms`);
     // console.log(`Parallel is ${Math.round(sequentialResult.totalTime / parallelResult.totalTime)}x faster!\n`);
 
-
-
   } catch (error) {
     console.error("Challenge 2 failed:", error.message);
+  }
+
+  // Test Challenge 3
+  try {
+    console.log("--- Testing Challenge 3 ---");
+
+    // Test number stream
+    // console.log("Testing number stream...");
+    // const numberResult = await processNumberStream(5, 300);
+    // console.log(`Number stream result:`, numberResult);
+
+  } catch (error) {
+    console.error("Challenge 3 failed:", error.message);
   }
 
 
@@ -256,10 +341,16 @@ testChallenges();
  *    - Use Promise.allSettled when some operations might fail
  *    - Provide fallbacks for failed operations
  * 
+ * 4. ASYNC GENERATORS:
+ *    - Use async function* to create generators that yield over time
+ *    - Perfect for streaming data, pagination, or large datasets
+ *    - Use for-await-of to consume async generators
+ *    - Memory efficient - process data as it arrives
+ * 
  * 🎯 NEXT STEPS:
- * - Practice with different APIs
- * - Learn about async generators for large datasets
- * - Explore advanced patterns like retry logic
+ * - Practice with real APIs and streaming data
+ * - Explore advanced patterns like retry logic and backpressure
+ * - Learn about async iterators for custom data sources
  * - Build a small project using these patterns
  */
 
