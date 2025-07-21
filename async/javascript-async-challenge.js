@@ -53,19 +53,19 @@ function delay(ms) {
 
 async function sayHelloAfterDelay(name, delayTime) {
   // TODO: 
-  // 1. Print "Starting to wait..."
+  // 1. Start timing with console.time
   // 2. Wait for 'delayTime' milliseconds using await and delay()
   // 3. Print "Hello, [name]!"
-  // 4. Return a message: "Greeted [name] after [delayTime]ms"
+  // 4. End timing with console.timeEnd
+  // 5. Return a message: "Greeted [name] after [delayTime]ms"
 
   // SKELETON:
-  // console.log("Starting to wait...");
-  // await delay(delayTime);
+  // console.time(`Greeting ${name}`);
+  // add your wait code here
   // console.log(`Hello, ${name}!`);
+  // console.timeEnd(`Greeting ${name}`);
   // return `Greeted ${name} after ${delayTime}ms`;
 }
-
-
 
 // =============================================================================
 // CHALLENGE 2: WORKING WITH MULTIPLE ASYNC OPERATIONS
@@ -172,8 +172,6 @@ async function fetchUserDataParallel(userId) {
   };
 }
 
-
-
 // =============================================================================
 // CHALLENGE 3: REAL API CALLS WITH FETCH
 // =============================================================================
@@ -250,8 +248,6 @@ async function testChallenges() {
     // console.log("Testing sayHelloAfterDelay...");
     // const greeting = await sayHelloAfterDelay("Alice", 500);
     // console.log(`Result: ${greeting}\n`);
-
-
 
   } catch (error) {
     console.error("Challenge 1 failed:", error.message);
