@@ -21,7 +21,7 @@ let hasKey = false;
 let hasSword = false;
 let hasPotion = false;
 
-// TODO: Welcome message and player status
+// TODO 1: Welcome message and player status (COMPLETED - Example provided)
 console.log("🗡️ Welcome to the Dungeon Adventure! 🗡️");
 console.log(`Health: ${playerHealth} | Gold: ${playerGold}`);
 
@@ -29,25 +29,29 @@ console.log(`Health: ${playerHealth} | Gold: ${playerGold}`);
 console.log("\n--- SCENARIO 1: The Mysterious Door ---");
 console.log("You approach a locked door. What do you do?");
 
-// TODO: Simulate player choice (change this value to test different paths)
+// TODO 2: Simulate player choice (change this value to test different paths)
 let doorChoice = "search"; // Options: "search", "force", "knock"
 
-// TODO: Use if/else if/else to handle the door scenario
+// TODO 3: Use if/else if/else to handle the door scenario
+// Complete this conditional structure:
 // if (doorChoice === "search") {
 //     // Player finds a key hidden nearby
 //     // Set hasKey = true
-//     // Display success message
+//     // Display message: "You search around the door and find a hidden key!"
+//     // Display message: "Key acquired!"
 // } else if (doorChoice === "force") {
 //     // Player tries to break down the door
-//     // Loses 20 health but gets through
-//     // Display damage message
+//     // Subtract 20 from playerHealth
+//     // Display message: "You force the door open but injure yourself in the process."
+//     // Display message: "You lose 20 health."
 // } else if (doorChoice === "knock") {
 //     // A friendly guard opens the door and gives gold
-//     // Add 25 gold
-//     // Display friendly message
+//     // Add 25 to playerGold
+//     // Display message: "A friendly guard opens the door."
+//     // Display message: "The guard gives you 25 gold for being polite!"
 // } else {
 //     // Invalid choice
-//     // Display error message
+//     // Display message: "That's not a valid choice. You stand confused."
 // }
 
 // SCENARIO 2: The Merchant
@@ -57,85 +61,122 @@ console.log("1. Sword (30 gold) - Increases attack power");
 console.log("2. Health Potion (20 gold) - Restores 50 health");
 console.log("3. Nothing - Save your gold");
 
-// TODO: Simulate merchant choice
-let merchantChoice = 1; // Change this to test different options
+// TODO 4: Simulate merchant choice
+let merchantChoice = 1; // Change this to test different options (1, 2, 3, or invalid number)
 
-// TODO: Use switch statement to handle merchant interaction
+// TODO 5: Use switch statement to handle merchant interaction
+// Complete this switch statement:
 // switch (merchantChoice) {
 //     case 1:
 //         // Buy sword if player has enough gold
-//         // Check if playerGold >= 30
-//         // If yes: subtract gold, set hasSword = true
-//         // If no: display insufficient funds message
+//         // if (playerGold >= 30) {
+//             // Subtract 30 from playerGold
+//             // Set hasSword = true
+//             // Display message: "You purchase a sword for 30 gold."
+//             // Display message: `Remaining gold: ${playerGold}`
+//         // } else {
+//             // Display message: "You don't have enough gold for the sword."
+//         // }
 //         break;
 //     case 2:
 //         // Buy potion if player has enough gold
-//         // Check if playerGold >= 20
-//         // If yes: subtract gold, set hasPotion = true
-//         // If no: display insufficient funds message
+//         // if (playerGold >= 20) {
+//             // Subtract 20 from playerGold
+//             // Set hasPotion = true
+//             // Display message: "You purchase a health potion for 20 gold."
+//             // Display message: `Remaining gold: ${playerGold}`
+//         // } else {
+//             // Display message: "You don't have enough gold for the potion."
+//         // }
 //         break;
 //     case 3:
 //         // Player chooses not to buy anything
-//         // Display message about saving gold
+//         // Display message: "You decide to save your gold for later."
 //         break;
 //     default:
 //         // Invalid choice
-//         // Display error message
+//         // Display message: "The merchant looks confused. That's not a valid option."
 // }
 
 // SCENARIO 3: The Dragon Encounter
 console.log("\n--- SCENARIO 3: The Dragon Encounter ---");
 console.log("A fierce dragon blocks your path!");
 
-// TODO: Use complex logical operators to determine outcome
+// TODO 6: Use complex logical operators to determine outcome
 // Check multiple conditions using && and ||
 
-// TODO: Determine if player can fight the dragon
+// TODO 7: Determine if player can fight the dragon
 // Player can fight if they have a sword AND health > 50
-// let canFight = ?
+// let canFight = hasSword && playerHealth > 50;
 
-// TODO: Determine if player should flee
+// TODO 8: Determine if player should flee
 // Player should flee if they have no sword OR health < 30
-// let shouldFlee = ?
+// let shouldFlee = !hasSword || playerHealth < 30;
 
-// TODO: Use conditional operator for quick decision
+// TODO 9: Use conditional operator for quick decision
 // let dragonStrategy = canFight ? "fight" : "flee";
 
-// TODO: Handle the dragon encounter
+// TODO 10: Handle the dragon encounter based on multiple conditions
+// Complete this conditional structure:
 // if (canFight && hasSword) {
 //     // Player defeats the dragon
-//     // Gain 100 gold
-//     // Lose 30 health
-//     // Display victory message
+//     // Add 100 to playerGold
+//     // Subtract 30 from playerHealth
+//     // Display message: "With your sword in hand, you bravely fight the dragon!"
+//     // Display message: "You defeat the dragon but take 30 damage."
+//     // Display message: "You found 100 gold in the dragon's hoard!"
 // } else if (hasPotion && playerHealth < 50) {
 //     // Player uses potion first, then fights
-//     // Restore health with potion
-//     // Then fight (lose 20 health, gain 75 gold)
-//     // Display strategic message
+//     // Add 50 to playerHealth (potion effect)
+//     // Set hasPotion = false (potion used)
+//     // Subtract 20 from playerHealth (fight damage)
+//     // Add 75 to playerGold (victory reward)
+//     // Display message: "You drink your health potion first!"
+//     // Display message: "Feeling stronger, you fight the dragon and win!"
+//     // Display message: "You found 75 gold!"
 // } else {
 //     // Player flees
-//     // Lose 10 health from running
-//     // Display flee message
+//     // Subtract 10 from playerHealth (running damage)
+//     // Display message: "You decide to flee from the mighty dragon."
+//     // Display message: "You lose 10 health while running away."
 // }
 
 // SCENARIO 4: The Treasure Room
 console.log("\n--- SCENARIO 4: The Treasure Room ---");
 
-// TODO: Check if player has the key from earlier
+// TODO 11: Check if player has the key from earlier scenario
+// Complete this conditional:
 // if (hasKey) {
 //     // Player can enter treasure room
-//     // Find random treasure (use Math.random())
+//     // Generate random treasure value between 50-149
 //     // let treasureValue = Math.floor(Math.random() * 100) + 50;
-//     // Add treasure to gold
-//     // Display treasure found message
+//     // Add treasureValue to playerGold
+//     // Display message: "You use your key to unlock the treasure room!"
+//     // Display message: `You found a treasure chest worth ${treasureValue} gold!`
 // } else {
 //     // Player cannot enter
-//     // Display locked door message
+//     // Display message: "The treasure room is locked and you don't have a key."
+//     // Display message: "You can only look through the keyhole at the riches inside."
 // }
 
-// TODO: Final status report
+// TODO 12: Final status report
 console.log("\n--- ADVENTURE COMPLETE ---");
-// Display final health, gold, and items
+// Display the following:
+// console.log("Final Status:");
+// console.log(`Health: ${playerHealth}`);
+// console.log(`Gold: ${playerGold}`);
+// 
+// Create an items array and display items:
+// let items = [];
+// if (hasKey) items.push("Key");
+// if (hasSword) items.push("Sword");
+// if (hasPotion) items.push("Health Potion");
+// 
+// if (items.length > 0) {
+//     console.log(`Items: ${items.join(", ")}`);
+// } else {
+//     console.log("Items: None");
+// }
 
 /*
 BONUS CHALLENGES:
@@ -143,21 +184,29 @@ BONUS CHALLENGES:
 2. Create a combat system with multiple rounds
 3. Add an inventory system with item limits
 4. Implement a save/load game feature using objects
+5. Add random events that affect player stats
+6. Create different endings based on final stats
 
-EXPECTED OUTPUT EXAMPLE:
-========================
+EXPECTED OUTPUT EXAMPLE (with doorChoice="search", merchantChoice=1):
+================================================================
 🗡️ Welcome to the Dungeon Adventure! 🗡️
 Health: 100 | Gold: 50
 
 --- SCENARIO 1: The Mysterious Door ---
+You approach a locked door. What do you do?
 You search around the door and find a hidden key!
 Key acquired!
 
 --- SCENARIO 2: The Merchant ---
+A merchant offers you items for sale:
+1. Sword (30 gold) - Increases attack power
+2. Health Potion (20 gold) - Restores 50 health
+3. Nothing - Save your gold
 You purchase a sword for 30 gold.
 Remaining gold: 20
 
 --- SCENARIO 3: The Dragon Encounter ---
+A fierce dragon blocks your path!
 With your sword in hand, you bravely fight the dragon!
 You defeat the dragon but take 30 damage.
 You found 100 gold in the dragon's hoard!
@@ -170,6 +219,22 @@ You found a treasure chest worth 75 gold!
 Final Status:
 Health: 70
 Gold: 195
-Items: Sword, Key
+Items: Key, Sword
+
+TESTING SCENARIOS:
+================
+Try these different combinations to test your code:
+
+1. doorChoice = "force", merchantChoice = 2
+   Expected: Player loses health, buys potion, uses potion in dragon fight
+
+2. doorChoice = "knock", merchantChoice = 3  
+   Expected: Player gets extra gold, saves money, flees from dragon
+
+3. doorChoice = "invalid", merchantChoice = 4
+   Expected: Error messages for invalid choices
+
+4. Set playerGold = 10 initially
+   Expected: Cannot afford any merchant items
 */
 

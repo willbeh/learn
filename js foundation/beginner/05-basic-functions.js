@@ -19,143 +19,93 @@ console.log("🔧 Welcome to the Function Workshop! 🔧\n");
 // CHALLENGE 5A: Basic Function Creation
 console.log("--- CHALLENGE 5A: Basic Function Creation ---");
 
-// TODO: Create a function to greet users
-// function greetUser(name) {
-//     // Return a greeting message
-//     // Example: "Hello, Alice! Welcome to our website!"
-// }
+// TODO: Create a function `greetUser` that takes a name parameter and returns a greeting string
+// Example: greetUser("Alice") should return "Hello, Alice!"
 
-// TODO: Test the greet function
+
+// Test the greet function
 // let greeting1 = greetUser("Alice");
 // let greeting2 = greetUser("Bob");
-// console.log(greeting1);
-// console.log(greeting2);
+// console.log(greeting1);  // Expected: "Hello, Alice!"
+// console.log(greeting2);  // Expected: "Hello, Bob!"
 
-// TODO: Create a function to calculate rectangle area
-// function calculateRectangleArea(length, width) {
-//     // Calculate and return area
-//     // Formula: length * width
-// }
+// TODO: Create a function `calculateRectangleArea` that takes width and height parameters
+// and returns the area (width * height)
 
-// TODO: Test the rectangle area function
+// Test the rectangle area function
 // let area1 = calculateRectangleArea(5, 3);
 // let area2 = calculateRectangleArea(10, 7);
-// console.log(`Rectangle 1 area: ${area1}`);
-// console.log(`Rectangle 2 area: ${area2}`);
+// console.log(`Rectangle 1 area: ${area1}`);  // Expected: Rectangle 1 area: 15
+// console.log(`Rectangle 2 area: ${area2}`);  // Expected: Rectangle 2 area: 70
 
 // CHALLENGE 5B: Math Utility Functions
 console.log("\n--- CHALLENGE 5B: Math Utility Functions ---");
 
-// TODO: Create a function to check if a number is even
-// function isEven(number) {
-//     // Return true if even, false if odd
-//     // Use modulo operator (%)
-// }
+// TODO: Create a function `isEven` that takes a number and returns true if even, false if odd
 
-// TODO: Create a function to find the maximum of three numbers
-// function findMax(a, b, c) {
-//     // Return the largest of the three numbers
-//     // Use conditional statements
-// }
 
-// TODO: Create a function to calculate circle circumference
-// function calculateCircumference(radius) {
-//     // Formula: 2 * π * radius
-//     // Use Math.PI for π
-// }
+// TODO: Create a function `findMax` that takes three numbers and returns the largest one
 
-// TODO: Test the math functions
-// console.log(`Is 8 even? ${isEven(8)}`);
-// console.log(`Is 7 even? ${isEven(7)}`);
-// console.log(`Max of 15, 23, 9: ${findMax(15, 23, 9)}`);
-// console.log(`Circumference of circle with radius 5: ${calculateCircumference(5).toFixed(2)}`);
+
+// TODO: Create a function `calculateCircumference` that takes a radius and returns the circumference
+// Formula: 2 * Math.PI * radius
+
+
+// Test the math functions
+// console.log(`Is 8 even? ${isEven(8)}`);  // Expected: Is 8 even? true
+// console.log(`Is 7 even? ${isEven(7)}`);  // Expected: Is 7 even? false
+// console.log(`Max of 15, 23, 9: ${findMax(15, 23, 9)}`);  // Expected: Max of 15, 23, 9: 23
+// console.log(`Circumference of circle with radius 5: ${calculateCircumference(5).toFixed(2)}`);  // Expected: Circumference of circle with radius 5: 31.42
 
 // CHALLENGE 5C: String Processing Functions
 console.log("\n--- CHALLENGE 5C: String Processing Functions ---");
 
-// TODO: Create a function to count vowels in a string
-// function countVowels(text) {
-//     // Count a, e, i, o, u (case insensitive)
-//     // Return the count
-//     let vowels = "aeiouAEIOU";
-//     let count = 0;
-//     
-//     for (let i = 0; i < text.length; i++) {
-//         // Check if character is a vowel
-//         // Increment count if it is
-//     }
-//     
-//     return count;
-// }
+// TODO: Create a function `countVowels` that takes a string and returns the number of vowels (a, e, i, o, u)
+// Count both uppercase and lowercase vowels
 
-// TODO: Create a function to reverse a string
-// function reverseString(text) {
-//     // Return the string reversed
-//     // Example: "hello" becomes "olleh"
-// }
+// TODO: Create a function `reverseString` that takes a string and returns it reversed
 
-// TODO: Create a function to capitalize first letter of each word
-// function capitalizeWords(sentence) {
-//     // Split sentence into words
-//     // Capitalize first letter of each word
-//     // Join back together
-//     // Example: "hello world" becomes "Hello World"
-// }
 
-// TODO: Test the string functions
+// TODO: Create a function `capitalizeWords` that takes a string and returns it with the first letter
+// of each word capitalized
+
+
+// Test the string functions
 // let testString = "JavaScript is awesome";
 // console.log(`Original: "${testString}"`);
-// console.log(`Vowel count: ${countVowels(testString)}`);
-// console.log(`Reversed: "${reverseString(testString)}"`);
-// console.log(`Capitalized: "${capitalizeWords(testString)}"`);
+// console.log(`Vowel count: ${countVowels(testString)}`);  // Expected: Vowel count: 7
+// console.log(`Reversed: "${reverseString(testString)}"`);  // Expected: Reversed: "emosewa si tpircSavaJ"
+// console.log(`Capitalized: "${capitalizeWords(testString)}"`);  // Expected: Capitalized: "Javascript Is Awesome"
 
 // CHALLENGE 5D: Temperature Converter
 console.log("\n--- CHALLENGE 5D: Temperature Converter ---");
 
-// TODO: Create function to convert Celsius to Fahrenheit
-// function celsiusToFahrenheit(celsius) {
-//     // Formula: (celsius * 9/5) + 32
-// }
+// TODO: Create function `celsiusToFahrenheit` that converts Celsius to Fahrenheit
+// Formula: (celsius * 9/5) + 32
 
-// TODO: Create function to convert Fahrenheit to Celsius
-// function fahrenheitToCelsius(fahrenheit) {
-//     // Formula: (fahrenheit - 32) * 5/9
-// }
+// TODO: Create function `fahrenheitToCelsius` that converts Fahrenheit to Celsius
+// Formula: (fahrenheit - 32) * 5/9
 
-// TODO: Create a general temperature converter function
-// function convertTemperature(temperature, fromUnit, toUnit) {
-//     // Convert between C and F based on fromUnit and toUnit
-//     // Use the functions above
-//     // Return the converted temperature
-//     
-//     if (fromUnit === "C" && toUnit === "F") {
-//         // Convert C to F
-//     } else if (fromUnit === "F" && toUnit === "C") {
-//         // Convert F to C
-//     } else if (fromUnit === toUnit) {
-//         // Same unit, return original temperature
-//     } else {
-//         // Invalid units
-//         return "Invalid units";
-//     }
-// }
+// TODO: Create a general `convertTemperature` function that takes (value, fromUnit, toUnit)
+// fromUnit and toUnit should be "C" or "F"
+// Use the above functions internally
 
-// TODO: Test temperature converter
-// console.log(`25°C = ${celsiusToFahrenheit(25)}°F`);
-// console.log(`77°F = ${fahrenheitToCelsius(77).toFixed(1)}°C`);
-// console.log(`0°C = ${convertTemperature(0, "C", "F")}°F`);
-// console.log(`100°F = ${convertTemperature(100, "F", "C").toFixed(1)}°C`);
+// Test temperature converter
+// console.log(`25°C = ${celsiusToFahrenheit(25)}°F`);  // Expected: 25°C = 77°F
+// console.log(`77°F = ${fahrenheitToCelsius(77).toFixed(1)}°C`);  // Expected: 77°F = 25.0°C
+// console.log(`0°C = ${convertTemperature(0, "C", "F")}°F`);  // Expected: 0°C = 32°F
+// console.log(`100°F = ${convertTemperature(100, "F", "C").toFixed(1)}°C`);  // Expected: 100°F = 37.8°C
 
 // CHALLENGE 5E: Grade Calculator
 console.log("\n--- CHALLENGE 5E: Grade Calculator ---");
 
-// TODO: Create function to calculate letter grade
+// TODO: Create function `calculateLetterGrade` that takes a numerical score (0-100)
+// and returns the letter grade: A (90-100), B (80-89), C (70-79), D (60-69), F (0-59)
 // function calculateLetterGrade(score) {
 //     // Return letter grade based on score
-//     // A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: below 60
 // }
 
-// TODO: Create function to calculate GPA for multiple grades
+// TODO: Create function `calculateGPA` for multiple letter grades
 // function calculateGPA(grades) {
 //     // grades is an array of letter grades
 //     // A=4, B=3, C=2, D=1, F=0
@@ -172,19 +122,27 @@ console.log("\n--- CHALLENGE 5E: Grade Calculator ---");
 //             case "B":
 //                 // Add 3 points
 //                 break;
-//             // Add other cases
+//             case "C":
+//                 // Add 2 points
+//                 break;
+//             case "D":
+//                 // Add 1 point
+//                 break;
+//             case "F":
+//                 // Add 0 points
+//                 break;
 //         }
 //     }
 //     
-//     // Return average
+//     // Return average GPA
 // }
 
-// TODO: Create function to determine if student passes
+// TODO: Create function `isPassingGrade` that takes a GPA number
 // function isPassingGrade(gpa) {
 //     // Return true if GPA >= 2.0, false otherwise
 // }
 
-// TODO: Test grade calculator
+// TODO: Uncomment and test the grade calculator
 // let studentScores = [85, 92, 78, 88, 95];
 // let letterGrades = [];
 
@@ -194,56 +152,15 @@ console.log("\n--- CHALLENGE 5E: Grade Calculator ---");
 //     letterGrades.push(grade);
 //     console.log(`Score: ${studentScores[i]} = Grade: ${grade}`);
 // }
+// Expected output:
+// Score: 85 = Grade: B
+// Score: 92 = Grade: A
+// Score: 78 = Grade: C
+// Score: 88 = Grade: B
+// Score: 95 = Grade: A
 
 // let gpa = calculateGPA(letterGrades);
 // let passing = isPassingGrade(gpa);
-// console.log(`\nGPA: ${gpa.toFixed(2)}`);
-// console.log(`Passing: ${passing ? "Yes" : "No"}`);
-
-/*
-BONUS CHALLENGES:
-1. Create a function that generates random passwords
-2. Build a simple calculator with add, subtract, multiply, divide functions
-3. Create a function that validates email addresses
-4. Build a text-based menu system using functions
-
-EXPECTED OUTPUT EXAMPLE:
-========================
-🔧 Welcome to the Function Workshop! 🔧
-
---- CHALLENGE 5A: Basic Function Creation ---
-Hello, Alice! Welcome to our website!
-Hello, Bob! Welcome to our website!
-Rectangle 1 area: 15
-Rectangle 2 area: 70
-
---- CHALLENGE 5B: Math Utility Functions ---
-Is 8 even? true
-Is 7 even? false
-Max of 15, 23, 9: 23
-Circumference of circle with radius 5: 31.42
-
---- CHALLENGE 5C: String Processing Functions ---
-Original: "JavaScript is awesome"
-Vowel count: 8
-Reversed: "emosewa si tpircSavaJ"
-Capitalized: "Javascript Is Awesome"
-
---- CHALLENGE 5D: Temperature Converter ---
-25°C = 77°F
-77°F = 25.0°C
-0°C = 32°F
-100°F = 37.8°C
-
---- CHALLENGE 5E: Grade Calculator ---
-Student Scores and Grades:
-Score: 85 = Grade: B
-Score: 92 = Grade: A
-Score: 78 = Grade: C
-Score: 88 = Grade: B
-Score: 95 = Grade: A
-
-GPA: 3.20
-Passing: Yes
-*/
+// console.log(`\nGPA: ${gpa.toFixed(2)}`);  // Expected: GPA: 3.20
+// console.log(`Passing: ${passing ? "Yes" : "No"}`);  // Expected: Passing: Yes
 
