@@ -172,51 +172,7 @@ async function fetchUserDataParallel(userId) {
   };
 }
 
-// =============================================================================
-// CHALLENGE 3: REAL API CALLS WITH FETCH
-// =============================================================================
 
-/**
- * CHALLENGE 3: Using Fetch API with Async/Await
- * 
- * GOAL: Learn to make real HTTP requests using fetch and async/await
- * 
- * WHAT YOU'LL LEARN:
- * - Using fetch() with async/await
- * - Handling HTTP errors properly
- * - Processing JSON responses
- */
-
-console.log("\n=== CHALLENGE 3: FETCH API WITH ASYNC/AWAIT ===\n");
-
-// TASK 3.1: Basic fetch with error handling
-/**
- * Create a function that fetches data from a public API
- */
-
-async function fetchRandomUser() {
-  // TODO:
-  // 1. Use fetch to get data from 'https://randomuser.me/api/'
-  // 2. Check if the response is ok (response.ok)
-  // 3. Parse the JSON response
-  // 4. Return the user data (results[0])
-  // 5. Handle any errors that might occur
-
-  // SKELETON:
-  // try {
-  //     const response = await fetch('https://randomuser.me/api/');
-  //     
-  //     if (!response.ok) {
-  //         throw new Error(`HTTP error! status: ${response.status}`);
-  //     }
-  //     
-  //     const data = await response.json();
-  //     return data.results[0];
-  // } catch (error) {
-  //     console.error('Error fetching user:', error);
-  //     throw error;
-  // }
-}
 
 
 
@@ -273,22 +229,7 @@ async function testChallenges() {
     console.error("Challenge 2 failed:", error.message);
   }
 
-  // Test Challenge 3
-  try {
-    console.log("\n--- Testing Challenge 3 ---");
 
-    // Test basic fetch
-    // console.log("Testing random user fetch...");
-    // const user = await fetchRandomUser();
-    // console.log(`Fetched user: ${user.name.first} ${user.name.last}`);
-
-
-
-
-
-  } catch (error) {
-    console.error("Challenge 3 failed:", error.message);
-  }
 
   console.log("\n✅ Testing complete! Uncomment the test code as you implement each function.");
 }
@@ -314,11 +255,6 @@ testChallenges();
  *    - Always handle errors in async operations
  *    - Use Promise.allSettled when some operations might fail
  *    - Provide fallbacks for failed operations
- * 
- * 4. REAL-WORLD APIS:
- *    - Always check response.ok before parsing
- *    - Handle network timeouts
- *    - Gracefully handle API failures
  * 
  * 🎯 NEXT STEPS:
  * - Practice with different APIs
