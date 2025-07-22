@@ -2,6 +2,9 @@
 const express = require("express");
 const app = express();
 
+// Parse JSON bodies
+app.use(express.json());
+
 const nameList = [
   "Amy",
   "Betty",
@@ -22,18 +25,13 @@ app.get("/", (req, res) => {
 // TASK: Add name to the nameList
 // path: /add-name
 // test using CURL: 
-// curl http://localhost:3000/add-name -X POST -d "name=John"
+// curl -X POST http://localhost:3000/add-name -H "Content-Type: application/json" -d '{"name":"John"}'
 //
-app.post("/add-name", (req, res) => {
-  const name = req.body.name;
-  nameList.push(name);
-  res.send(`Added ${name} to the nameList`);
-});
 
 // TASK Update name in the namelist based on the id
 // path: /update-name/:id
 // test using CURL: 
-// curl http://localhost:3000/update-name/1 -X PUT -d "name=John"
+// curl http://localhost:3000/update-name/1 -X PUT -H "Content-Type: application/json" -d '{"name":"John"}'
 //
 
 // TASK Delete name from the nameList based on the id
