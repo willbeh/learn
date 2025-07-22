@@ -1,13 +1,65 @@
-const randomNumbers = [83, 13, 27, 49, 71, 19, 31, 53, 67, 89];
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-const filteredNumbers = randomNumbers.filter(number => number > 50);
+// Create an async generator for each number
+async function* singleNumberGenerator(num, delayMs) {
+  const randomDelay1 = Math.random() * (1000 - 200) + 200;
+  const randomDelay2 = Math.random() * (1000 - 200) + 200;
 
-// use lambda to `filter` out number more than 50, 
-// then `sort` the numbers in descending order
-// const result = ......
-// console.log(result)
-// expected result: [89, 83, 71, 67, 53]
-// sum the numbers in the result using `reduce` method
-// const sum = ......
-// console.log(sum)
-// expected result: 363
+  await delay(delayMs + randomDelay1);
+  yield {
+    type: 'first',
+    value: num
+  };
+
+  await delay(delayMs + randomDelay2);
+  yield {
+    type: 'second',
+    value: num
+  };
+}
+
+async function processNumberStream(count, delayMs) {
+  const firstValues = [];
+  const secondValues = [];
+
+  // Start all generators concurrently
+  const generatorPromises = [];
+
+  for (let i = 1; i <= count; i++) {
+    const generatorPromise = (async () => {
+      const generator = singleNumberGenerator(i, delayMs);
+
+      console.time(`Number ${i} arrived`);
+
+      for await (const data of generator) {
+        if (data.type === 'first') {
+          console.log('first value', data.value);
+          firstValues.push(data.value);
+        } else {
+          console.log('second value', data.value);
+          secondValues.push(data.value);
+        }
+      }
+
+      console.timeEnd(`Number ${i} arrived`);
+    })();
+
+    generatorPromises.push(generatorPromise);
+  }
+
+  // Wait for all generators to complete
+  await Promise.all(generatorPromises);
+
+  console.log('firstValues', firstValues);
+  console.log('secondValues', secondValues);
+  return {
+    firstValues,
+    secondValues
+  };
+}
+
+// Test the parallel version with async generators
+console.log('=== Testing Parallel Async Generators ===');
+await processNumberStream(5, 500);
