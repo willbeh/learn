@@ -4,19 +4,20 @@ describe('User API Functions', () => {
 
   // TEST 1: Test the getUserById function
   describe('getUserById', () => {
-    /* 
-    STUDENT INSTRUCTIONS:
-    Write tests for the getUserById function. Consider these test cases:
-    - Valid ID (0-9) should return the correct name
-    - Invalid ID (negative, too large, non-numeric) should return null
-    - Edge cases like string IDs that can be parsed vs cannot be parsed
+
+    // STUDENT INSTRUCTIONS:
+    // Write tests for the getUserById function. Consider these test cases:
+    // - Valid ID (0-9) should return the correct name
+    // - Invalid ID (negative, too large, non-numeric) should return null
+    // - Edge cases like string IDs that can be parsed vs cannot be parsed
     
-    Example test structure:
+    // Example test structure:
     test('should return correct user for valid ID', () => {
       // Your test code here
-      // Use expect(getUserById(0)).toBe('Amy');
+      // Use 
+      expect(getUserById(0)).toBe('Amy');
     });
-    */
+
 
     // TODO: Write your tests here
 
@@ -35,13 +36,14 @@ describe('User API Functions', () => {
     Hint: You might need to mock the current year or use a known year for consistent testing
     
     Example:
-    test('should calculate correct age', () => {
-      // Your test code here
-    });
+    
     */
 
     // TODO: Write your tests here
-
+    test('should calculate correct age', () => {
+      // Your test code here
+      expect(calculateAge(2000)).toBe(new Date().getFullYear() - 2000);
+    });
   });
 
   // TEST 3: Test the formatUserList function
@@ -55,16 +57,20 @@ describe('User API Functions', () => {
     - Should include all 10 users from the nameList
     
     Example:
+    
+    */
+
+    // TODO: Write your tests here
     test('should format user list correctly', () => {
       const result = formatUserList();
       expect(result).toContain('0: Amy');
       expect(result).toContain('9: Jack');
+      expect(result.split(', ').length).toBe(10); // Should have 10 users
+      expect(result).toMatch(/^\d+: \w+(, \d+: \w+)*$/); // Matches the format "index: name"
+      expect(result).toBe('0: Amy, 1: Betty, 2: Cathy, 3: Diana, 4: Ethan, 5: Fiona, 6: George, 7: Hannah, 8: Ivy, 9: Jack');
+      // You can add more assertions to check the exact format
       // Add more assertions
     });
-    */
-
-    // TODO: Write your tests here
-
   });
 
 });
