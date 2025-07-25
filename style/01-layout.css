@@ -1,0 +1,70 @@
+/*
+ 01-layout.css Challenge
+
+ Instructions:
+ 1. Use the provided selectors to practice layout techniques.
+ 2. Try changing display, position, and float properties as described.
+ 3. Edit this file to complete each challenge below.
+ 4. Refresh the HTML page to see your changes.
+
+ Challenge Tasks:
+ 1. Display: Make .container a flex container
+ 2. Positioning: Absolutely position .box2 inside .container
+ 3. Float: Float .box3 to the right
+ 4. Bonus: Center .box1 horizontally inside .container using any layout method
+*/
+
+/* Basic styling to make elements visible */
+body {
+  font-family: sans-serif;
+  margin: 2rem;
+}
+
+.container {
+  background: #e0e7ef;
+  padding: 1rem;
+  min-height: 200px;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+.box1,
+.box2,
+.box3 {
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.box1 {
+  background: #ffd166;
+}
+
+.box2 {
+  background: #06d6a0;
+}
+
+.box3 {
+  background: #118ab2;
+  color: #fff;
+}
+
+/* 1. Display: Make .container a flex container */
+.container {
+  /* TODO: Set display to flex */
+}
+
+/* 2. Positioning: Absolutely position .box2 inside .container */
+.box2 {
+  /* TODO: Use position, top, left, etc. to place this box */
+}
+
+/* 3. Float: Float .box3 to the right */
+.box3 {
+  /* TODO: Float this box to the right */
+}
+
+/* 4. Bonus: Center .box1 horizontally inside .container using any layout method */
+.box1 {
+  /* TODO: Center this box horizontally */
+}
