@@ -1,0 +1,262 @@
+/* Base styles - no responsive work needed here */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header and Navigation */
+.header {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #3498db;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  /* TODO: Show this button on mobile, hide nav-menu instead */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  /* TODO: Make this responsive - smaller on mobile, larger on desktop */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #c0392b;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.feature-grid {
+  display: grid;
+  gap: 2rem;
+  /* TODO: Add responsive grid columns: 1 column on mobile, 2 on tablet, 4 on desktop */
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Content Section */
+.content {
+  padding: 4rem 1rem;
+  background: #f8f9fa;
+}
+
+.content-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 3rem;
+  /* TODO: Add responsive grid layout: stacked on mobile, side-by-side on desktop */
+}
+
+.content-text h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.content-text p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.placeholder-image {
+  background: #ddd;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 3rem 1rem 1rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  /* TODO: Add responsive grid layout: stacked on mobile, 3 columns on desktop */
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: #3498db;
+}
+
+.footer-section p {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.footer-section input {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.footer-section button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid #34495e;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* TODO: Add responsive breakpoints and styles below */
+
+/* Mobile styles (< 768px) */
+@media (max-width: 767px) {
+  /* TODO: 
+    1. Hide .nav-menu, show .mobile-menu-btn
+    2. Make hero text smaller (h1: 2rem, p: 1rem)
+    3. Set feature-grid to 1 column
+    4. Set content-grid to 1 column (stacked)
+    5. Set footer-content to 1 column (stacked)
+    */
+}
+
+/* Tablet styles (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* TODO: 
+    1. Set feature-grid to 2 columns
+    2. Adjust hero text size (h1: 2.5rem, p: 1.1rem)
+    3. Set footer-content to 2 columns
+    */
+}
+
+/* Desktop styles (> 1024px) */
+@media (min-width: 1024px) {
+  /* TODO: 
+    1. Set feature-grid to 4 columns
+    2. Set content-grid to 2 columns (side-by-side)
+    3. Set footer-content to 3 columns
+    4. Keep hero text large (h1: 3rem, p: 1.2rem)
+    */
+}

@@ -1,0 +1,372 @@
+/* 
+CSS ESSENTIALS EXERCISE - STYLES.CSS
+=====================================
+
+INSTRUCTIONS:
+Complete the CSS rules below by following the comments and applying the concepts 
+from the CSS Essentials presentation. Remove the /* TODO: */ comments as you 
+complete each section.
+
+CONCEPTS COVERED:
+1. Basic selectors (element, class, ID)
+2. Color values (hex, rgb, rgba, hsl)
+3. Borders and rounded corners
+4. Box shadows and text shadows
+5. Text styling and spacing
+6. Pseudo-classes (:hover, :first-child, :last-child)
+7. Attribute selectors
+8. Vendor prefixes (optional advanced exercise)
+
+TIPS:
+- Test your changes by refreshing the HTML file in your browser
+- Experiment with different values to see their effects
+- Use browser developer tools to inspect and debug your CSS
+*/
+
+/* ===================
+   RESET AND BASE STYLES
+   =================== */
+
+/* Basic reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* ===================
+   HEADER STYLING
+   =================== */
+
+/* TODO: Style the main title with ID selector */
+#main-title {
+    /* Add your styles here:
+       - Large font size (2.5em or larger)
+       - Center alignment
+       - Custom color (try using hex, rgb, or hsl)
+       - Text shadow for depth
+       - Margin bottom for spacing
+    */
+    font-size: 2.5em;
+    text-align: center;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+/* TODO: Style the subtitle with class selector */
+.subtitle {
+    /* Add your styles here:
+       - Center alignment
+       - Italic font style
+       - Lighter color than main text
+       - Margin bottom for spacing
+    */
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+/* ===================
+   CARD LAYOUT
+   =================== */
+
+/* TODO: Style the card class */
+.card {
+    /* Add your styles here:
+       - White background
+       - Padding for inner spacing
+       - Margin bottom for separation
+       - Rounded corners (border-radius)
+       - Subtle box shadow
+       - Maximum width with auto margins for centering
+    */
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TODO: Style the highlight card variant */
+.card.highlight {
+    /* Add your styles here:
+       - Different background color (try using rgba or hsl)
+       - Different text color for contrast
+       - Maybe a colored border
+       - Stronger shadow to make it stand out
+    */
+    background-color: #e8f4fd;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================
+   TEXT STYLING
+   =================== */
+
+/* TODO: Style the intro-text class */
+.intro-text {
+    /* Add your styles here:
+       - Larger font size
+       - Different font weight
+       - Text indentation for first line
+       - Letter spacing
+       - Custom color
+    */
+    font-size: 1.1em;
+    font-weight: bold;
+    text-indent: 2em;
+    letter-spacing: 0.5px;
+    color: #2980b9;
+}
+
+/* TODO: Style h2 elements */
+h2 {
+    /* Add your styles here:
+       - Custom color
+       - Margin bottom for spacing
+       - Border bottom for decoration
+       - Padding bottom
+    */
+    color: #34495e;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+}
+
+/* ===================
+   COLOR BOXES
+   =================== */
+
+/* TODO: Style the color-box class */
+.color-box {
+    /* Add your styles here:
+       - Display as inline-block
+       - Fixed width and height
+       - Margin for spacing
+       - Rounded corners
+       - Center text alignment
+       - Padding for text positioning
+       - Default background color
+       - Text color for contrast
+    */
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #bdc3c7;
+    color: white;
+    font-weight: bold;
+}
+
+/* TODO: Use attribute selectors to style color boxes */
+.color-box[data-color="red"] {
+    /* Style for red box using rgb() */
+    background-color: rgb(231, 76, 60);
+}
+
+.color-box[data-color="blue"] {
+    /* Style for blue box using hsl() */
+    background-color: hsl(204, 70%, 53%);
+}
+
+.color-box[data-color="green"] {
+    /* Style for green box using rgba() with transparency */
+    background-color: rgba(46, 204, 113, 0.8);
+}
+
+/* ===================
+   SHADOW BOX
+   =================== */
+
+/* TODO: Style the shadow-box class */
+.shadow-box {
+    /* Add your styles here:
+       - Background color
+       - Padding
+       - Rounded corners (try different values for each corner)
+       - Multiple box shadows (outer and inner)
+       - Border for extra definition
+    */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px 5px 15px 5px;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+/* ===================
+   LIST STYLING
+   =================== */
+
+/* TODO: Style the feature-list class */
+.feature-list {
+    /* Add your styles here:
+       - Remove default list styling
+       - Padding and margin adjustments
+    */
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    /* Add your styles here:
+       - Padding for spacing
+       - Border bottom for separation
+       - Background color on hover
+    */
+    padding: 10px;
+    border-bottom: 1px solid #ecf0f1;
+    transition: background-color 0.3s ease;
+}
+
+/* TODO: Use pseudo-classes to style first and last items differently */
+.feature-list li:first-child {
+    /* Style for first item */
+    background-color: #e8f5e8;
+    font-weight: bold;
+}
+
+.feature-list li:last-child {
+    /* Style for last item */
+    background-color: #fef9e7;
+    border-bottom: none;
+}
+
+/* TODO: Add hover effect for list items */
+.feature-list li:hover {
+    /* Add hover styles */
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+/* ===================
+   INTERACTIVE BUTTONS
+   =================== */
+
+/* TODO: Style the interactive-btn class */
+.interactive-btn {
+    /* Add your styles here:
+       - Background color and text color
+       - Padding for size
+       - Border styling
+       - Rounded corners
+       - Margin for spacing
+       - Cursor pointer
+       - Transition for smooth effects
+    */
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* TODO: Add hover and active states for buttons */
+.interactive-btn:hover {
+    /* Add hover styles:
+       - Different background color
+       - Transform for movement
+       - Box shadow for depth
+    */
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.interactive-btn:active {
+    /* Add active (clicked) styles */
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================
+   FOOTER STYLING
+   =================== */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #34495e;
+    color: white;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===================
+   ADVANCED EXERCISES (OPTIONAL)
+   =================== */
+
+/* TODO: Add vendor prefixes for better browser compatibility */
+/* 
+Example: Add vendor prefixes for transform and transition properties
+.interactive-btn {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.interactive-btn:hover {
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+*/
+
+/* TODO: Experiment with additional CSS3 features */
+/*
+Try adding:
+- CSS gradients for backgrounds
+- CSS animations or keyframes
+- More complex selectors (nth-child, etc.)
+- CSS variables (custom properties)
+- Media queries for responsive design
+*/
+
+/* ===================
+   CHALLENGE EXERCISES
+   =================== */
+
+/* 
+CHALLENGE 1: Create a CSS-only tooltip
+Add a tooltip that appears when hovering over the main title
+
+CHALLENGE 2: Create a loading animation
+Add a spinning animation to one of the color boxes
+
+CHALLENGE 3: Responsive design
+Add media queries to make the layout work on mobile devices
+
+CHALLENGE 4: Dark mode
+Create an alternative dark theme using CSS variables
+*/
+
