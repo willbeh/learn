@@ -4,25 +4,8 @@ CSS ESSENTIALS EXERCISE - STYLES.CSS
 
 INSTRUCTIONS:
 Complete the CSS rules below by following the comments and applying the concepts 
-from the CSS Essentials presentation. Remove the /* TODO: */ comments as you 
-complete each section.
-
-CONCEPTS COVERED:
-1. Basic selectors (element, class, ID)
-2. Color values (hex, rgb, rgba, hsl)
-3. Borders and rounded corners
-4. Box shadows and text shadows
-5. Text styling and spacing
-6. Pseudo-classes (:hover, :first-child, :last-child)
-7. Attribute selectors
-8. Vendor prefixes (optional advanced exercise)
-
-TIPS:
-- Test your changes by refreshing the HTML file in your browser
-- Experiment with different values to see their effects
-- Use browser developer tools to inspect and debug your CSS
-*/
-
+from the CSS Essentials presentation. Remove the TODO:
+comments as you complete each section. CONCEPTS COVERED: 1. Basic selectors (element, class, ID) 2. Color values (hex, rgb, rgba, hsl) 3. Borders and rounded corners 4. Box shadows and text shadows 5. Text styling and spacing 6. Pseudo-classes (:hover, :first-child, :last-child) 7. Attribute selectors 8. Vendor prefixes (optional advanced exercise) TIPS: - Test your changes by refreshing the HTML file in your browser - Experiment with different values to see their effects - Use browser developer tools to inspect and debug your CSS */
 /* ===================
    RESET AND BASE STYLES
    =================== */
@@ -55,11 +38,6 @@ body {
        - Text shadow for depth
        - Margin bottom for spacing
     */
-    font-size: 2.5em;
-    text-align: center;
-    color: #2c3e50;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 10px;
 }
 
 /* TODO: Style the subtitle with class selector */
@@ -70,11 +48,6 @@ body {
        - Lighter color than main text
        - Margin bottom for spacing
     */
-    text-align: center;
-    font-style: italic;
-    color: #7f8c8d;
-    margin-bottom: 30px;
-    font-size: 1.2em;
 }
 
 /* ===================
@@ -91,14 +64,6 @@ body {
        - Subtle box shadow
        - Maximum width with auto margins for centering
     */
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* TODO: Style the highlight card variant */
@@ -109,9 +74,6 @@ body {
        - Maybe a colored border
        - Stronger shadow to make it stand out
     */
-    background-color: #e8f4fd;
-    border-left: 4px solid #3498db;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* ===================
@@ -127,11 +89,6 @@ body {
        - Letter spacing
        - Custom color
     */
-    font-size: 1.1em;
-    font-weight: bold;
-    text-indent: 2em;
-    letter-spacing: 0.5px;
-    color: #2980b9;
 }
 
 /* TODO: Style h2 elements */
@@ -142,10 +99,6 @@ h2 {
        - Border bottom for decoration
        - Padding bottom
     */
-    color: #34495e;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 5px;
 }
 
 /* ===================
@@ -164,32 +117,19 @@ h2 {
        - Default background color
        - Text color for contrast
     */
-    display: inline-block;
-    width: 100px;
-    height: 60px;
-    margin: 10px;
-    border-radius: 5px;
-    text-align: center;
-    padding-top: 20px;
-    background-color: #bdc3c7;
-    color: white;
-    font-weight: bold;
 }
 
 /* TODO: Use attribute selectors to style color boxes */
 .color-box[data-color="red"] {
     /* Style for red box using rgb() */
-    background-color: rgb(231, 76, 60);
 }
 
 .color-box[data-color="blue"] {
     /* Style for blue box using hsl() */
-    background-color: hsl(204, 70%, 53%);
 }
 
 .color-box[data-color="green"] {
     /* Style for green box using rgba() with transparency */
-    background-color: rgba(46, 204, 113, 0.8);
 }
 
 /* ===================
@@ -205,14 +145,6 @@ h2 {
        - Multiple box shadows (outer and inner)
        - Border for extra definition
     */
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 15px 5px 15px 5px;
-    box-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.2),
-        inset 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-    margin: 15px 0;
 }
 
 /* ===================
@@ -225,8 +157,6 @@ h2 {
        - Remove default list styling
        - Padding and margin adjustments
     */
-    list-style: none;
-    padding-left: 0;
 }
 
 .feature-list li {
@@ -235,29 +165,20 @@ h2 {
        - Border bottom for separation
        - Background color on hover
     */
-    padding: 10px;
-    border-bottom: 1px solid #ecf0f1;
-    transition: background-color 0.3s ease;
 }
 
 /* TODO: Use pseudo-classes to style first and last items differently */
 .feature-list li:first-child {
     /* Style for first item */
-    background-color: #e8f5e8;
-    font-weight: bold;
 }
 
 .feature-list li:last-child {
     /* Style for last item */
-    background-color: #fef9e7;
-    border-bottom: none;
 }
 
 /* TODO: Add hover effect for list items */
 .feature-list li:hover {
     /* Add hover styles */
-    background-color: #f8f9fa;
-    cursor: pointer;
 }
 
 /* ===================
@@ -275,15 +196,6 @@ h2 {
        - Cursor pointer
        - Transition for smooth effects
     */
-    background-color: #3498db;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 25px;
-    margin: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
 }
 
 /* TODO: Add hover and active states for buttons */
@@ -293,15 +205,10 @@ h2 {
        - Transform for movement
        - Box shadow for depth
     */
-    background-color: #2980b9;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .interactive-btn:active {
     /* Add active (clicked) styles */
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* ===================
@@ -369,4 +276,3 @@ Add media queries to make the layout work on mobile devices
 CHALLENGE 4: Dark mode
 Create an alternative dark theme using CSS variables
 */
-
